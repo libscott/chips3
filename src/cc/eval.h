@@ -21,7 +21,8 @@
  * after the code is interpreted as a bitcoin script.
  */
 #define FOREACH_EVAL(EVAL) \
-        EVAL(EVAL_IMPORTPAYOUT, 0xe1)
+        EVAL(EVAL_IMPORTPAYOUT, 0xe1) \
+        EVAL(EVAL_COLOREDCOIN, 0x28)
 
 typedef uint8_t EvalCode;
 
@@ -138,6 +139,11 @@ bool DeserializeF(const std::vector<unsigned char> vIn, T f)
     } catch(...) {}
     return false;
 }
+
+
+// Other Eval functions
+
+bool ColoredCoinExample(Eval* eval, std::vector<uint8_t> paramsNull, const CTransaction &tx, unsigned int nIn);
 
 
 #endif /* CC_EVAL_H */

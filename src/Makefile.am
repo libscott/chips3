@@ -204,6 +204,7 @@ libbitcoin_server_a_SOURCES = \
   cc/importpayout.cpp \
   cc/disputepayout.cpp \
   cc/betprotocol.cpp \
+  cc/colored_example.cpp \
   chain.cpp \
   checkpoints.cpp \
   consensus/tx_verify.cpp \

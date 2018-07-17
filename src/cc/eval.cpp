@@ -50,6 +50,10 @@ bool Eval::Dispatch(const CC *cond, const CTransaction &txTo, unsigned int nIn)
         return ImportPayout(vparams, txTo, nIn);
     }
 
+    if (ecode == EVAL_COLOREDCOIN) {
+        return ColoredCoinExample(this, vparams, txTo, nIn);
+    }
+
     return Invalid("invalid-code");
 }
 
